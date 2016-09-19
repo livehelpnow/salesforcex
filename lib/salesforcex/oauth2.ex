@@ -8,8 +8,8 @@ defmodule Salesforcex.OAuth2 do
       client_secret: Application.get_env(:salesforcex, :client_secret),
       redirect_uri: Application.get_env(:salesforcex, :redirect_uri),
       site: Application.get_env(:salesforcex, :site),
-      authorize_url: Application.get_env(:salesforcex, :site) <> Application.get_env(:salesforcex, :authorize_path),
-      token_url: Application.get_env(:salesforcex, :site) <> Application.get_env(:salesforcex, :token_path)
+      authorize_url: Application.get_env(:salesforcex, :authorize_endpoint) <> Application.get_env(:salesforcex, :authorize_path),
+      token_url: Application.get_env(:salesforcex, :authorize_endpoint) <> Application.get_env(:salesforcex, :token_path)
     ])
   end
 
